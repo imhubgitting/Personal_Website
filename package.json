@@ -9,8 +9,7 @@
     "preview": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "format": "prettier --write \"**/*.{js,css,html,md}\"",
-    "deploy": "npm run build && gh-pages -d dist"
+    "format": "prettier --write \"**/*.{js,css,html,md}\""
   },
   "repository": {
     "type": "git",

@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/', // Change from './' to '/' for custom domain
+  base: '/Personal_Website/', // GitHub Pages deployment path
   build: {
-    outDir: 'dist',
+    outDir: 'docs',
     assetsDir: 'assets',
     sourcemap: true,
   },
