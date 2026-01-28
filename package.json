@@ -1,0 +1,36 @@
+{
+  "name": "gavin-antonacci-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website built with Vite, ES6 modules, and modern best practices.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"**/*.{js,css,html,md}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imhubgitting/Personal_Website.git"
+  },
+  "keywords": [
+    "portfolio",
+    "personal-website",
+    "vite"
+  ],
+  "author": "Gavin Antonacci",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/imhubgitting/Personal_Website/issues"
+  },
+  "homepage": "https://github.com/imhubgitting/Personal_Website#readme",
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.8.1",
+    "vite": "^7.3.1"
+  }
+}

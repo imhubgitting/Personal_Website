@@ -1,164 +1,224 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gavin Antonacci - Software Engineer portfolio and personal website">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gavin Antonacci - Software Engineer portfolio and personal website"
+    />
     <title>Gavin Antonacci - Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <div class="header-content">
-                <div class="header-left">
-                    <h1>Gavin Antonacci</h1>
-                    <p class="subtitle">Software Engineer</p>
-                </div>
-                <nav class="header-right">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                        <svg class="sun-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="5"></circle>
-                            <line x1="12" y1="1" x2="12" y2="3"></line>
-                            <line x1="12" y1="21" x2="12" y2="23"></line>
-                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                            <line x1="1" y1="12" x2="3" y2="12"></line>
-                            <line x1="21" y1="12" x2="23" y2="12"></line>
-                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                        </svg>
-                        <svg class="moon-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: none;">
-                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                        </svg>
-                    </button>
-                    <a href="#projects" class="nav-link">/projects</a>
-                    <a href="#articles" class="nav-link">/articles</a>
-                    <a href="#about" class="nav-link">/about</a>
-                </nav>
+      <header>
+        <div class="header-content">
+          <div class="header-left">
+            <h1>Gavin Antonacci</h1>
+            <p class="subtitle">Software Engineer</p>
+          </div>
+          <nav class="header-right">
+            <button
+              id="theme-toggle"
+              class="theme-toggle"
+              aria-label="Toggle theme"
+            >
+              <svg
+                class="sun-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="5"></circle>
+                <line x1="12" y1="1" x2="12" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="23"></line>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                <line x1="1" y1="12" x2="3" y2="12"></line>
+                <line x1="21" y1="12" x2="23" y2="12"></line>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+              </svg>
+              <svg
+                class="moon-icon"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+                ></path>
+              </svg>
+            </button>
+            <a href="#projects" class="nav-link">/projects</a>
+            <a href="#about" class="nav-link">/about</a>
+          </nav>
+        </div>
+      </header>
+
+      <main>
+        <section class="bio">
+          <p>
+            Recent Computer Science Graduate at Florida State University.
+            Aspiring Software Engineer.
+          </p>
+        </section>
+        <section class="social-links">
+          <a
+            href="https://www.linkedin.com/in/gavin-antonacci-6b4b342a9/"
+            class="social-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="card-content">
+              <svg
+                class="card-icon"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="#0077B5"
+              >
+                <path
+                  d="M29.63,0H2.362C1.056,0,0,1.056,0,2.362v27.277C0,30.944,1.056,32,2.362,32h27.268C30.944,32,32,30.944,32,29.639V2.362C32,1.056,30.944,0,29.63,0z M9.495,27.275H4.742V12.004h4.753V27.275z M7.119,9.933c-1.521,0-2.753-1.232-2.753-2.753c0-1.521,1.232-2.753,2.753-2.753c1.521,0,2.753,1.232,2.753,2.753C9.872,8.701,8.64,9.933,7.119,9.933z M27.276,27.275h-4.748v-7.43c0-1.771-0.036-4.05-2.469-4.05c-2.471,0-2.848,1.929-2.848,3.919v7.561h-4.748V12.004h4.558v2.091h0.063c0.634-1.201,2.184-2.469,4.493-2.469c4.801,0,5.689,3.161,5.689,7.274V27.275z"
+                />
+              </svg>
+              <span class="card-text">LinkedIn</span>
+              <svg
+                class="arrow-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
             </div>
-        </header>
+          </a>
 
-        <main>
-            <section class="bio">
-                <p>Florida State University Recent Graduate in Computer Science. Aspiring as a Software Engineer.</p>
-            </section>
+          <a
+            href="https://github.com/imhubgitting"
+            class="social-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div class="card-content">
+              <svg
+                class="card-icon github-icon"
+                width="32"
+                height="32"
+                viewBox="0 0 32 32"
+                fill="currentColor"
+              >
+                <path
+                  d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"
+                />
+              </svg>
+              <span class="card-text">GitHub</span>
+              <svg
+                class="arrow-icon"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="7" y1="17" x2="17" y2="7"></line>
+                <polyline points="7 7 17 7 17 17"></polyline>
+              </svg>
+            </div>
+          </a>
+        </section>
 
-            <section class="social-links">
-                <a href="#linkedin" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon" width="32" height="32" viewBox="0 0 32 32" fill="#0077B5">
-                            <path d="M29.63,0H2.362C1.056,0,0,1.056,0,2.362v27.277C0,30.944,1.056,32,2.362,32h27.268C30.944,32,32,30.944,32,29.639V2.362C32,1.056,30.944,0,29.63,0z M9.495,27.275H4.742V12.004h4.753V27.275z M7.119,9.933c-1.521,0-2.753-1.232-2.753-2.753c0-1.521,1.232-2.753,2.753-2.753c1.521,0,2.753,1.232,2.753,2.753C9.872,8.701,8.64,9.933,7.119,9.933z M27.276,27.275h-4.748v-7.43c0-1.771-0.036-4.05-2.469-4.05c-2.471,0-2.848,1.929-2.848,3.919v7.561h-4.748V12.004h4.558v2.091h0.063c0.634-1.201,2.184-2.469,4.493-2.469c4.801,0,5.689,3.161,5.689,7.274V27.275z"/>
-                        </svg>
-                        <span class="card-text">LinkedIn</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
+        <section class="contact-section">
+          <div
+            class="email-container"
+            id="email-copy"
+            role="button"
+            tabindex="0"
+            aria-label="Click to copy email address"
+          >
+            <span class="email">gavinaantonacci@gmail.com</span>
+            <svg
+              class="email-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M22 2L11 13"></path>
+              <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
+            </svg>
+          </div>
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            Online
+          </div>
+        </section>
 
-                <a href="#github" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon github-icon" width="32" height="32" viewBox="0 0 32 32" fill="currentColor">
-                            <path d="M16 0.396c-8.839 0-16 7.167-16 16 0 7.073 4.584 13.068 10.937 15.183 0.803 0.151 1.093-0.344 1.093-0.772 0-0.38-0.009-1.385-0.015-2.719-4.453 0.964-5.391-2.151-5.391-2.151-0.729-1.844-1.781-2.339-1.781-2.339-1.448-0.989 0.115-0.968 0.115-0.968 1.604 0.109 2.448 1.645 2.448 1.645 1.427 2.448 3.744 1.74 4.661 1.328 0.14-1.031 0.557-1.74 1.011-2.135-3.552-0.401-7.287-1.776-7.287-7.907 0-1.751 0.62-3.177 1.645-4.297-0.177-0.401-0.719-2.031 0.141-4.235 0 0 1.339-0.427 4.4 1.641 1.281-0.355 2.641-0.532 4-0.541 1.36 0.009 2.719 0.187 4 0.541 3.043-2.068 4.381-1.641 4.381-1.641 0.859 2.204 0.317 3.833 0.161 4.235 1.015 1.12 1.635 2.547 1.635 4.297 0 6.145-3.74 7.5-7.296 7.891 0.556 0.479 1.077 1.464 1.077 2.959 0 2.14-0.020 3.864-0.020 4.385 0 0.416 0.28 0.916 1.104 0.755 6.4-2.093 10.979-8.093 10.979-15.156 0-8.833-7.161-16-16-16z"/>
-                        </svg>
-                        <span class="card-text">GitHub</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
+        <!-- Toast notification for copy confirmation -->
+        <div id="copy-toast" class="copy-toast">Email copied to clipboard!</div>
 
-                <a href="#link1" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10"></circle>
-                            <line x1="2" y1="12" x2="22" y2="12"></line>
-                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-                        </svg>
-                        <span class="card-text">Social Link 1</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
+        <section class="cta-section">
+          <a
+            href="/assets/resume_gavin_antonacci_2026_v1.pdf"
+            download
+            class="cv-button"
+          >
+            Download my CV
+            <svg
+              class="download-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+          <a
+            href="assets/resume_gavin_antonacci_2026_v1.pdf"
+            download
+            class="cv-button resume-button"
+          >
+            Download my Resume
+            <svg
+              class="download-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+              <line x1="12" y1="15" x2="12" y2="3"></line>
+            </svg>
+          </a>
+        </section>
+      </main>
 
-                <a href="#link2" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-                        </svg>
-                        <span class="card-text">Social Link 2</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
-
-                <a href="#link3" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                        </svg>
-                        <span class="card-text">Social Link 3</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
-
-                <a href="#link4" class="social-card" target="_blank" rel="noopener noreferrer">
-                    <div class="card-content">
-                        <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                        </svg>
-                        <span class="card-text">Social Link 4</span>
-                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <line x1="7" y1="17" x2="17" y2="7"></line>
-                            <polyline points="7 7 17 7 17 17"></polyline>
-                        </svg>
-                    </div>
-                </a>
-            </section>
-
-            <section class="contact-section">
-                <div class="email-container">
-                    <span class="email">gavinaantonacci@gmail.com</span>
-                    <svg class="email-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 2L11 13"></path>
-                        <path d="M22 2L15 22L11 13L2 9L22 2Z"></path>
-                    </svg>
-                </div>
-                <div class="status-badge">
-                    <span class="status-dot"></span>
-                    Online
-                </div>
-            </section>
-
-            <section class="cta-section">
-                <a href="assets/cv/placeholder.pdf" download class="cv-button">
-                    Download my CV
-                    <svg class="download-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                        <polyline points="7 10 12 15 17 10"></polyline>
-                        <line x1="12" y1="15" x2="12" y2="3"></line>
-                    </svg>
-                </a>
-            </section>
-        </main>
-
-        <footer>
-            <p class="footer-message">Work In Progress :)</p>
-        </footer>
+      <footer>
+        <p class="footer-message">Work In Progress :)</p>
+      </footer>
     </div>
 
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

@@ -1,211 +1,217 @@
-# Personal Website - Gavin Antonacci
+# Gavin Antonacci - Portfolio Website
 
-A modern, responsive personal portfolio website built with HTML, CSS, and JavaScript. Features a clean design with light/dark theme toggle functionality.
+Professional portfolio website built with Vite, ES6 modules, and modern best practices.
 
 ## Features
 
-- Clean, minimal design matching modern web standards
-- Light/Dark theme toggle with localStorage persistence
-- Responsive design (mobile, tablet, desktop)
-- Social media links section
-- CV download functionality
-- Email and online status display
-- Smooth animations and transitions
-- Accessibility-friendly (keyboard navigation, focus states)
+- **Modern Architecture**: ES6 modules with class-based components
+- **Build Tool**: Vite for fast development and optimized production builds
+- **Theme Toggle**: Light/Dark mode with localStorage persistence
+- **Responsive Design**: Mobile, tablet, and desktop layouts
+- **Email Copy**: Click-to-copy email functionality with toast notifications
+- **Link Prefetching**: Instant page loading with intelligent prefetching
+- **Code Quality**: ESLint and Prettier for consistent code style
+- **Accessibility**: Keyboard navigation, ARIA labels, and focus states
 
 ## Project Structure
 
 ```
 Personal_Website/
-├── index.html          # Main HTML file
-├── styles.css          # Styling for light/dark themes
-├── script.js           # Theme toggle and interactions
-├── assets/
-│   └── cv/
-│       └── README.txt  # Instructions for adding your CV
-└── README.md           # This file
+├── .eslintrc.json          # ESLint configuration (legacy)
+├── .gitignore              # Git ignore rules
+├── .prettierrc             # Prettier configuration
+├── eslint.config.js        # ESLint flat config (ESLint 9+)
+├── package.json            # Project dependencies and scripts
+├── vite.config.js          # Vite build configuration
+├── index.html              # Main HTML entry point
+├── src/
+│   ├── main.js             # JavaScript entry point
+│   ├── js/
+│   │   ├── config/
+│   │   │   └── constants.js    # Single source of truth for config
+│   │   └── modules/
+│   │       ├── theme.js            # Theme toggle functionality
+│   │       ├── email-copy.js       # Email copy to clipboard
+│   │       ├── prefetch.js         # Link prefetching
+│   │       ├── smooth-scroll.js    # Smooth scrolling
+│   │       └── entrance-animation.js # Page load animation
+│   └── styles/
+│       └── main.css        # Organized CSS with CSS variables
+└── public/
+    └── assets/
+        └── resume_gavin_antonacci_2026_v1.pdf  # Resume file
 ```
 
-## How to Run
+## Prerequisites
 
-This is a static website that doesn't require any build tools or servers. Simply:
+- Node.js 18+ (includes npm)
 
-1. Open `index.html` in your web browser
-2. Or use a local server:
-   - Python: `python -m http.server 8000`
-   - Node.js: `npx serve`
-   - VS Code: Use the Live Server extension
+## Installation
 
-## Customization Guide
+1. Clone the repository:
 
-### 1. Update Personal Information
-
-Open [index.html](index.html) and update:
-
-- **Line 10**: Page title
-- **Line 18-19**: Your name and title
-- **Line 48**: Bio paragraph
-- **Line 51-140**: Social media links
-
-### 2. Add Your Social Links
-
-Replace the placeholder `href="#"` attributes with your actual URLs:
-
-```html
-<!-- Example: Update LinkedIn -->
-<a href="https://www.linkedin.com/in/your-profile" class="social-card" target="_blank">
+```bash
+git clone https://github.com/imhubgitting/Personal_Website.git
+cd Personal_Website
 ```
 
-Update these sections:
-- LinkedIn (line ~51)
-- GitHub (line ~63)
-- Social Link 1-4 (lines ~75-140)
+2. Install dependencies:
 
-You can also change the card text and icons to match your preferred social platforms.
-
-### 3. Add Your CV
-
-1. Place your CV PDF in the `assets/cv/` folder
-2. Update the download link in [index.html](index.html) (line ~155):
-
-```html
-<a href="assets/cv/YOUR_CV_FILENAME.pdf" download class="cv-button">
+```bash
+npm install
 ```
 
-### 4. Customize Colors
+## Development
 
-Edit [styles.css](styles.css) to change the color scheme:
+### Start Development Server
 
-**Light Theme** (line 11-21):
+Run the Vite development server with hot module reloading:
+
+```bash
+npm run dev
+```
+
+The site will open automatically at [http://localhost:3000](http://localhost:3000)
+
+### Build for Production
+
+Create an optimized production build:
+
+```bash
+npm run build
+```
+
+Output will be in the `dist/` folder.
+
+### Preview Production Build
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+### Code Quality
+
+Run ESLint to check for code issues:
+
+```bash
+npm run lint
+```
+
+Auto-fix ESLint issues:
+
+```bash
+npm run lint:fix
+```
+
+Format code with Prettier:
+
+```bash
+npm run format
+```
+
+## Customization
+
+### Update Personal Information
+
+Edit [src/js/config/constants.js](src/js/config/constants.js):
+
+```javascript
+export const CONFIG = {
+  email: 'your-email@example.com',
+  social: {
+    linkedin: 'https://linkedin.com/in/your-profile',
+    github: 'https://github.com/your-username',
+  },
+  // ... other settings
+};
+```
+
+### Update HTML Content
+
+Edit [index.html](index.html):
+
+- **Line 14**: Your name
+- **Line 15**: Your title
+- **Line 42**: Bio paragraph
+- **Lines 45-69**: Social links
+
+### Customize Colors
+
+Edit [src/styles/main.css](src/styles/main.css) CSS variables:
+
 ```css
 :root {
-    --bg-primary: #f7f7f7;      /* Background color */
-    --accent-blue: #60a5fa;      /* Button and link color */
-    /* ... other colors */
+  --color-bg-primary: #f7f7f7;
+  --color-accent-blue: #60a5fa;
+  /* ... other variables */
 }
 ```
 
-**Dark Theme** (line 24-34):
-```css
-body.dark-theme {
-    --bg-primary: #0f172a;       /* Dark background */
-    /* ... other colors */
+### Add Your Resume
+
+1. Place your resume PDF in `public/assets/`
+2. Update the filename in [src/js/config/constants.js](src/js/config/constants.js):
+
+```javascript
+files: {
+  cv: '/assets/your-cv.pdf',
+  resume: '/assets/your-resume.pdf',
 }
 ```
-
-### 5. Update Navigation Links
-
-The navigation links (/projects, /articles, /about) are currently placeholders. To make them functional:
-
-**Option 1**: Create separate HTML pages
-```
-/projects.html
-/articles.html
-/about.html
-```
-
-**Option 2**: Add sections to the same page and update links:
-```html
-<a href="#projects" class="nav-link">/projects</a>
-```
-
-### 6. Customize Footer
-
-Edit line ~170 in [index.html](index.html):
-```html
-<p class="footer-message">Your custom message here</p>
-```
-
-## Browser Compatibility
-
-Tested and working on:
-- Chrome/Edge (latest)
-- Firefox (latest)
-- Safari (latest)
-- Mobile browsers (iOS Safari, Chrome Mobile)
-
-## Technologies Used
-
-- **HTML5**: Semantic markup
-- **CSS3**: Custom properties (CSS variables), Flexbox, responsive design
-- **JavaScript**: Theme toggle, localStorage, smooth animations
-- **SVG Icons**: Inline icons for scalability and customization
-
-## Theme Toggle
-
-The theme toggle button (sun/moon icon) switches between light and dark modes:
-- Click to toggle themes
-- Preference saved in browser localStorage
-- Theme persists across page reloads
-- Keyboard accessible (Tab + Enter/Space)
 
 ## Deployment
 
 ### GitHub Pages
 
-1. Commit all changes:
+1. Build the project:
+
 ```bash
-git add .
-git commit -m "Initial website setup"
+npm run build
 ```
 
-2. Push to GitHub:
-```bash
-git push origin main
-```
+2. Deploy the `dist/` folder to GitHub Pages
 
-3. Go to repository Settings > Pages
-4. Select "main" branch as source
-5. Your site will be live at: `https://yourusername.github.io/Personal_Website/`
+### Netlify
 
-### Other Hosting Options
+1. Connect your repository to Netlify
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
 
-- **Netlify**: Drag and drop the folder
-- **Vercel**: Connect your GitHub repository
-- **Cloudflare Pages**: Connect your GitHub repository
-- **Traditional hosting**: Upload files via FTP
+### Vercel
 
-## Responsive Breakpoints
+1. Connect your repository to Vercel
+2. Vercel will automatically detect Vite and configure correctly
 
-- **Desktop**: 1000px+ (max-width container)
-- **Tablet**: 768px - 1000px
-- **Mobile**: < 768px (stacked layout)
-- **Small Mobile**: < 480px (compact spacing)
+## Technologies
 
-## Accessibility Features
+- **Vite 7**: Build tool and dev server
+- **ES6 Modules**: Modern JavaScript architecture
+- **CSS Variables**: Dynamic theming
+- **ESLint 9**: Code linting with flat config
+- **Prettier 3**: Code formatting
+- **HTML5**: Semantic markup
 
-- Semantic HTML elements
-- ARIA labels for interactive elements
-- Keyboard navigation support
-- Focus states for all interactive elements
-- Color contrast ratios meet WCAG standards
-- Alt text for icons (where applicable)
+## Browser Support
 
-## Future Enhancements
-
-Potential additions you might consider:
-
-- [ ] Create dedicated /projects page with project cards
-- [ ] Create dedicated /articles page with blog posts
-- [ ] Create dedicated /about page with detailed bio
-- [ ] Add contact form
-- [ ] Add animations on scroll (AOS library)
-- [ ] Integrate with a CMS for blog functionality
-- [ ] Add analytics (Google Analytics, Plausible)
-- [ ] Add RSS feed for articles
-- [ ] Create a sitemap for SEO
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## License
 
-This project is open source and available for personal use.
+MIT License - See repository for details
 
 ## Contact
 
 **Gavin Antonacci**
+
 - Email: gavinaantonacci@gmail.com
-- GitHub: [Add your GitHub URL]
-- LinkedIn: [Add your LinkedIn URL]
+- GitHub: [imhubgitting](https://github.com/imhubgitting)
+- LinkedIn: [Gavin Antonacci](https://www.linkedin.com/in/gavin-antonacci-6b4b342a9/)
 
 ---
 
-**Work In Progress :)**
+Built with modern web technologies and best practices.
